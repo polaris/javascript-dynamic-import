@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript import</title>
+    <script src="system.min.js"></script>
+</head>
+<body>
+    <h1>JavaScript import</h1>
+    <script>
+        async function loadModule() {
+            const module = await System.import('./app.js');
+            console.log(module);
+            module.hello();
+        }
+    </script>
+    <button onclick="loadModule()">Say hello</button>
+</html>
